@@ -130,7 +130,7 @@ export default function RealtimeDemoPage() {
 				.limit(5);
 			if (!error && Array.isArray(data)) {
 				setMessages(
-					data.reverse.map((row: any) => ({
+					data.reverse().map((row: any) => ({
 						id: row.id as string,
 						userId: (row.user_id as string) || "",
 						email: (row.email as string) ?? null,
